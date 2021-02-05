@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Article = ({title, author, image}) => (
+const Article = ({title, author, urlToImage}) => (
     <figure>
         <h3>{title}</h3>
         <p>{author}</p>
-        <image src={image} />
+        <img src={urlToImage} />
     </figure>
 );
 
-Article.PropTypes = {
+Article.propTypes = {
     title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    author: PropTypes.string,
+    urlToImage: PropTypes.string,
 };
 
 export default Article;
