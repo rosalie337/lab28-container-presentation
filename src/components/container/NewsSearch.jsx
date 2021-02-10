@@ -28,11 +28,10 @@ export default class NewsSearch extends Component {
     }
 
     render() {
-        const { search, articles, loading, } = this.state;
+        const {articles, loading, } = this.state;
         console.log(articles);
         return (
            <>
-            {/* <Search search={search} onChange={this.handleSearch} /> */}
             {loading && <h1>Loading</h1>}
             <ArticleList articles={articles} />
             </>
